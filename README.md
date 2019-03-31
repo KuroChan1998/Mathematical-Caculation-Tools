@@ -6,7 +6,7 @@ This a tool for mathematical caculation such as greatest common factor, primitiv
 
 ## A quick start
 
-* I provided the executable file 'SSSAssistant.exe' which you can run on windows without any JDK environment.
+* I provided the executable file 'SSSAssistant.exe' which you can run on Windows without any JDK environment.
 
 * If you have JDK and JRE, you can just copy these folders to the 'scr' directory of your java project. Then run 'Main.java' and you will find the same gui window as 'SSSAssistant.exe'.
 
