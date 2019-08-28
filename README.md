@@ -113,7 +113,7 @@ public class Test {
 * ChineseRemainderTheorem.java：中国剩余定理求解
 * Method0.java：该包下大部分方法的入口
 
-#### com.jzy.xxaqsxjc.method1
+### com.jzy.xxaqsxjc.method1
 
 此包主要是大三上《信息安全数学基础》课学习的知识点实现，您可以直接调用Method1.java中的静态方法，其涵盖了该包下大部分功能的api。使用示例如下：
 
@@ -185,7 +185,7 @@ public class Test {
 
 * Method1.java：该包下除椭圆曲线计算所有方法的入口
 
-#### com.jzy.xxaqsxjc.encyption.algorithm
+### com.jzy.xxaqsxjc.encyption.algorithm
 
 该包下提供三种加密算法，这里处于代码实现的简便，直接对明文逐个字符进行加密，使用实例如下：
 
