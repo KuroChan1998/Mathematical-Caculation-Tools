@@ -1,6 +1,6 @@
 # Mathematical-Calculation-Tools
 
-* *`Mathematical-Calculation-Tools`*是一个数值计算工具，功能包括整数域的运算(e.g 贝祖等式求解、勒让得符号、原根、素性检验....）；多项式的运算（e.g 贝祖等式求解、不可约多项式、本原多项式判断....)；加密算法（e.g. RSA)；椭圆曲线上的计算。
+* `Mathematical-Calculation-Tools`是一个数值计算工具，功能包括整数域的运算(e.g 贝祖等式求解、勒让得符号、原根、素性检验....）；多项式的运算（e.g 贝祖等式求解、不可约多项式、本原多项式判断....)；加密算法（e.g. RSA)；椭圆曲线上的计算。
 * 面向人群主要是上海交通大学信息安全专业修读《信息安全数学基础》课程的学生；其他网安专业学习数学理论基础的学生；抽象代数、应用数学领域学习的学生。
 * 含图形界面
 * 提供windows端的exe可执行程序；提供jar包，可作为api引用或在装有jre环境的机器上直接运行 
@@ -12,13 +12,13 @@
 
 ### 运行exe
 
-对大部分同学而言，在64位windows操作系统上可直接双击运行*`Mathematical-Caculation-Tools.exe`*
+对大部分同学而言，在64位windows操作系统上可直接双击运行`Mathematical-Caculation-Tools.exe`
 
 ![Snipaste_2019-08-28_13-20-32](screenshot/Snipaste_2019-08-28_13-20-32.jpg)
 
 ### 使用jar包
 
-在装有jre（>1.5）的机器上直接双击*`Mathematical-Caculation-Tools.jar`*也可以直接得到图形界面
+在装有jre（>1.5）的机器上直接双击`Mathematical-Caculation-Tools.jar`也可以直接得到图形界面
 
 ### 使用开发工具建立项目并运行
 
@@ -72,7 +72,7 @@
 
 这里省略对于图形界面的使用教程，正常脑壳的人都能上手。
 
-代码中对您有用的api大部分都涵盖在了*`com.jzy.xxaqsxjc`*包下，所有代码都有详细的注释，这里列举关键方法和部分示例。
+代码中对您有用的api大部分都涵盖在了`com.jzy.xxaqsxjc`包下，所有代码都有详细的注释，这里列举关键方法和部分示例。
 
 ### com.jzy.xxaqsxjc.method0 
 
