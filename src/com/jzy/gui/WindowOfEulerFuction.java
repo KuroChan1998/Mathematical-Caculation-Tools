@@ -96,7 +96,7 @@ public class WindowOfEulerFuction {
             public void actionPerformed(ActionEvent e) {
                 if (StringTest.isLegalIntegerBetweenMinAndMax(jtf1.getText(), Method0.VALUE_1, EulerFunction.MAX_INPUT_RECOMMENDED)) {
                     BigInteger n = new BigInteger(jtf1.getText());
-                    BigInteger Euler_n = Method0.Euler(n);
+                    BigInteger Euler_n = Method0.euler(n);
                     jtf3.setText(Euler_n.toString());
                 } else {
                     JOptionPane.showMessageDialog(null, "请输入" + Method0.VALUE_1 + "~" + EulerFunction.MAX_INPUT_RECOMMENDED + "内的数！");
