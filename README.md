@@ -74,7 +74,7 @@
 
 * 代码中对您有用的api大部分都涵盖在了`com.jzy.xxaqsxjc`包下，所有代码都有详细的注释
 
-* 代码文档详见`docs/index.html
+* 代码文档详见`docs/index.html`
 
 这里列举关键方法概览和部分示例。
 
