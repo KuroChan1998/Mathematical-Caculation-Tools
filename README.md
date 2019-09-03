@@ -42,9 +42,7 @@
   JVM: OpenJDK 64-Bit Server VM by JetBrains s.r.o
   Windows 10 10.0
 
-
-
-## Project Struture
+## 项目结构
 
 ```
 └─src
@@ -65,6 +63,12 @@
                 ├─method0     //《信息安全数学基础》（1）（大二下）中涵盖的大部分运算的代码实现
                 └─method1     //《信息安全数学基础》（2）（大三上）中涵盖的大部分运算的代码实现
 ```
+
+
+
+## 项目文档
+
+打开docs文件下的index.html，即可查看所有代码的注释说明
 
 
 
@@ -283,3 +287,13 @@ public class Test {
   
   使用类比RSA加密
 
+
+
+## 联系方式
+
+* qq: 929703621
+* wechat: Jzy_bb_1998
+* e-mail: 929703621@qq.com
+* github：<https://github.com/jinzhiyun1998/Mathematical-Caculation-Tools>
+
+欢迎提出意见与建议~
