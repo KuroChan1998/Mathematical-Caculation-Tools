@@ -1,70 +1,77 @@
 package com.jzy.util;
 
-import com.jzy.xxaqsxjc.method0.Method0;
-
 import java.math.BigInteger;
+
 import java.util.regex.Pattern;
 
+import com.jzy.xxaqsxjc.method0.Method0;
+
 /**
- * @ClassName: StringTest
- * @Description: 提供一些验证输入串格式的方法
- * @author: JinZhiyun
- * @date: 2019年3月16日 上午8:30:54
- * @Copyright: 2019 CyborgKuroChan All rights reserved.
- * 注意：本内容由超级酷乐酱开发(wechat:Jzy_bb_1998)
+ * 提供一些验证输入串格式的方法
+ *
+ * @author JinZhiyun
+ * @version 1.0, 19/09/03
  */
 public class StringTest {
+
     /**
-     * @throws
-     * @Title: isOnlyContain01
-     * @Description: 对GoldwasserMicali加密算法（对二进制加密）的输入子串是否只含0、1的判断
-     * @param: @param str
-     * @param: @return
-     * @return: boolean
+     * 判断输入是否全为数字
+     *
+     * @param str 输入字符串
+     * @return 布尔值，是否全为数字
+     * @version 1.0, 19/09/03
+     * @author JinZhiyun
      */
-    public static boolean isOnlyContain01(String str) {
-        Pattern pattern = Pattern.compile("[0-1]*");
-        return pattern.matcher(str).matches();
+    public static boolean isInteger(String str) {
+        Pattern pattern = Pattern.compile("^[-\\+]?[\\d]*$");
+        return pattern.matcher(str).matches() && !str.equals("-");
     }
 
     /**
-     * @throws
-     * @Title: isLegalInteger
-     * @Description: 判断输入是否合法，即非空且是数字
-     * @param: @param str
-     * @param: @return
-     * @return: boolean
+     * 判断输入是否合法，即非空且是数字
+     *
+     * @param str 输入字符串
+     * @return 布尔值，是否合法，即非空且是数字
+     * @version 1.0, 19/09/03
+     * @author JinZhiyun
      */
     public static boolean isLegalInteger(String str) {
         return (isInteger(str) && !str.equals(""));
     }
 
     /**
-     * @return boolean
-     * @Author JinZhiyun
-     * @Description 判断输入是否合法，即非空且是数字，且满足min <= str <=max
-     * @Date 22:22 2019/8/25
-     * @Param [str, min, max]
-     **/
+     * 判断输入是否合法，即非空且是数字，且满足min <= str <=max
+     *
+     * @param str 输入字符串
+     * @param min 下限值
+     * @param max 上限值
+     * @return 布尔值，是否合法，即非空且是数字，且满足min <= str <=max
+     * @version 1.0, 19/09/03
+     * @author JinZhiyun
+     */
     public static boolean isLegalIntegerBetweenMinAndMax(String str, BigInteger min, BigInteger max) {
         if (isLegalInteger(str)) {
             BigInteger b = new BigInteger(str);
-            return b.compareTo(min) >= 0 && b.compareTo(max) <= 0;
+
+            return (b.compareTo(min) >= 0) && (b.compareTo(max) <= 0);
         } else {
             return false;
         }
     }
 
     /**
-     * @return boolean
-     * @Author JinZhiyun
-     * @Description 判断输入是否合法，即非空且是数字，且满足min <= str
-     * @Date 22:28 2019/8/25
-     * @Param [str, min]
-     **/
+     * 判断输入是否合法，即非空且是数字，且满足min <= str
+     *
+     * @param str 输入字符串
+     * @param min 下限值
+     * @return 布尔值，是否合法，即非空且是数字，且满足min <= str
+     * @version 1.0, 19/09/03
+     * @author JinZhiyun
+     */
     public static boolean isLegalIntegerLargerThanMin(String str, BigInteger min) {
         if (isLegalInteger(str)) {
             BigInteger b = new BigInteger(str);
+
             return b.compareTo(min) >= 0;
         } else {
             return false;
@@ -72,15 +79,18 @@ public class StringTest {
     }
 
     /**
-     * @return boolean
-     * @Author JinZhiyun
-     * @Description 判断输入是否合法，即非空且是数字，且满足str <=max
-     * @Date 22:28 2019/8/25
-     * @Param [str, max]
-     **/
+     * 判断输入是否合法，即非空且是数字，且满足str <=max
+     *
+     * @param str 输入字符串
+     * @param max 上限值
+     * @return 布尔值，是否合法，即非空且是数字，且满足str <=max
+     * @version 1.0, 19/09/03
+     * @author JinZhiyun
+     */
     public static boolean isLegalIntegerSmallerThanMax(String str, BigInteger max) {
         if (isLegalInteger(str)) {
             BigInteger b = new BigInteger(str);
+
             return b.compareTo(max) <= 0;
         } else {
             return false;
@@ -88,54 +98,60 @@ public class StringTest {
     }
 
     /**
-     * @throws
-     * @Title: isLegalPositiveInteger
-     * @Description: 判断输入是否为正数
-     * @param: @param str
-     * @param: @return
-     * @return: boolean
+     * 判断输入是否为非负数
+     *
+     * @param str 输入字符串
+     * @return 布尔值，是否为非负数
+     * @version 1.0, 19/09/03
+     * @author JinZhiyun
      */
-    public static boolean isLegalPositiveInteger(String str) {
-        return isLegalIntegerLargerThanMin(str, Method0.VALUE_1); // >=1?
-    }
-
-    /**
-     * @return boolean
-     * @Author JinZhiyun
-     * @Description 判断输入是否为非负数
-     * @Date 20:37 2019/8/25
-     * @Param [str]
-     **/
     public static boolean isLegalNonNegativeInteger(String str) {
-        return isLegalIntegerLargerThanMin(str, Method0.VALUE_0); // >=0?
+        return isLegalIntegerLargerThanMin(str, Method0.VALUE_0);    // >=0?
     }
 
     /**
-     * @return boolean
-     * @Author JinZhiyun
-     * @Description 判断输入是否为奇素数
-     * @Date 12:31 2019/8/26
-     * @Param [str]
-     **/
+     * 判断输入是否为奇素数
+     *
+     * @param str 输入字符串
+     * @return 布尔值，是否为奇素数
+     * @version 1.0, 19/09/03
+     * @author JinZhiyun
+     */
     public static boolean isLegalOddPrimeInteger(String str) {
         if (isLegalPositiveInteger(str)) {
-            if (!str.equals("2") && Method0.solovayStassen(new BigInteger(str)) == 1) {
+            if (!str.equals("2") && (Method0.solovayStassen(new BigInteger(str)) == 1)) {
                 return true;
             }
         }
+
         return false;
     }
 
     /**
-     * @throws
-     * @Title: isInteger
-     * @Description: 判断输入是否全为数字
-     * @param: @param str
-     * @param: @return
-     * @return: boolean
+     * 判断输入是否为正数
+     *
+     * @param str 输入字符串
+     * @return 布尔值，是否为正数
+     * @version 1.0, 19/09/03
+     * @author JinZhiyun
      */
-    public static boolean isInteger(String str) {
-        Pattern pattern = Pattern.compile("^[-\\+]?[\\d]*$");
-        return pattern.matcher(str).matches() && !str.equals("-");
+    public static boolean isLegalPositiveInteger(String str) {
+        return isLegalIntegerLargerThanMin(str, Method0.VALUE_1);    // >=1?
+    }
+
+    /**
+     * 对（二进制加密）输入字串是否只含0、1的判断
+     *
+     * @param str 输入字符串
+     * @return 布尔值，是否只含0、1
+     * @version 1.0, 19/09/03
+     * @author JinZhiyun
+     */
+    public static boolean isOnlyContain01(String str) {
+        Pattern pattern = Pattern.compile("[0-1]*");
+        return pattern.matcher(str).matches();
     }
 }
+
+
+//~ Formatted by Jindent --- http://www.jindent.com

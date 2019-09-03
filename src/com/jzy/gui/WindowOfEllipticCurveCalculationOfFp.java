@@ -1,15 +1,3 @@
-/**
- * All rights Reserved, Designed By CyborgKuroChan
- *
- * @Title: WindowOfEllipticCurveCalculationOfFp.java
- * @Package com.jzy.gui
- * @Description: Fp上的椭圆曲线y^2=x^3+a4*x+a6的点的计算图形类
- * @author: JinZhiyun
- * @date: 2019年3月16日 下午4:01:43
- * @version V1.0
- * @Copyright: 2019 CyborgKuroChan All rights reserved.
- * 注意：本内容由超级酷乐酱开发(wechat:Jzy_bb_1998)
- */
 package com.jzy.gui;
 
 import java.awt.event.ActionEvent;
@@ -27,12 +15,10 @@ import com.jzy.xxaqsxjc.method0.Method0;
 import com.jzy.xxaqsxjc.method1.EllipticCurveCalculationOfFp;
 
 /**
- * @ClassName: WindowOfEllipticCurveCalculationOfFp
- * @Description: Fp上的椭圆曲线y^2=x^3+a4*x+a6的点的计算图形类
- * @author: JinZhiyun
- * @date: 2019年3月16日 下午4:01:43
- * @Copyright: 2019 CyborgKuroChan All rights reserved.
- * 注意：本内容由超级酷乐酱开发(wechat:Jzy_bb_1998)
+ * Fp上的椭圆曲线y^2=x^3+a4*x+a6的点的计算图形类
+ *
+ * @author JinZhiyun
+ * @version 1.0, 19/09/03
  */
 public class WindowOfEllipticCurveCalculationOfFp {
     /**

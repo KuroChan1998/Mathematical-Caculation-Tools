@@ -1,31 +1,31 @@
 package com.jzy.xxaqsxjc.encyption;
 
-import com.jzy.xxaqsxjc.encyption.executor.BinaryEncryptionExecutor;
-
 import java.math.BigInteger;
+
 import java.util.Vector;
 
-/**
- * @ClassName BinaryEncryption
- * @Author JinZhiyun
- * @Description 二进制加密类
- * @Date 2019/8/27 18:55
- * @Version 1.0
- **/
-public abstract class BinaryEncryption extends Encryption implements BinaryEncryptionExecutor {
-    protected Vector<BigInteger> cipherText = new Vector<>();// 存储密文
+import com.jzy.xxaqsxjc.encyption.executor.BinaryEncryptionExecutor;
 
-    public Vector<BigInteger> getCipherText() {
-        return cipherText;
-    }
+/**
+ * 二进制加密类，拥有把字符串形式明文（此明文为由0、1组成的字符串，表示二进制串）每一个字符加密成一个大整数的特性
+ * 抽象类用以继承，实现二进制加密执行器接口{@link BinaryEncryptionExecutor}
+ *
+ * @author JinZhiyun
+ * @version 1.0, 19/09/03
+ */
+public abstract class BinaryEncryption extends Encryption implements BinaryEncryptionExecutor {
 
     /**
-     * @return
-     * @Author JinZhiyun
-     * @Description 默认构造器
-     * @Date 21:10 2019/8/26
-     * @Param []
-     **/
+     * 存储密文，向量中每一个大整数对于明文的一个字符（0或1）
+     */
+    protected Vector<BigInteger> cipherText = new Vector<>();
+
+    /**
+     * 默认构造器
+     *
+     * @version 1.0, 19/09/03
+     * @author JinZhiyun
+     */
     public BinaryEncryption() {
         this.plainText = "";
         this.cipherText = new Vector<>();
@@ -33,10 +33,11 @@ public abstract class BinaryEncryption extends Encryption implements BinaryEncry
     }
 
     /**
-     * @throws
-     * @Title: RSAEncryption
-     * @Description: 构造器完成入参为明文plainText
-     * @param: @param plainText
+     * 构造器入参明文，设置plainText变量
+     *
+     * @param plainText
+     * @version 1.0, 19/09/03
+     * @author JinZhiyun
      */
     public BinaryEncryption(String plainText) {
         this.plainText = plainText;
@@ -45,24 +46,18 @@ public abstract class BinaryEncryption extends Encryption implements BinaryEncry
     }
 
     /**
-     * @Author JinZhiyun
-     * @Description 构造器完成入参
-     * @Date 19:36 2019/8/27
-     * @Param [plainText, cipherText, decryptedPlainText]
-     * @return
-     **/
-    public BinaryEncryption(String plainText, Vector<BigInteger> cipherText, String decryptedPlainText) {
-        this.plainText = plainText;
-        this.cipherText = cipherText;
-        this.decryptedPlainText = decryptedPlainText;
-    }
-
-    /**
-     * @Author JinZhiyun
-     * @Description 加密返回密文（大数向量形式）
-     * @Date 19:10 2019/8/27
-     * @Param []
-     * @return java.util.Vector<java.math.BigInteger>
-     **/
+     * 加密方法，将明文每一个字符对应加密成一个大整数，向上参见BinaryEncryptionExecutor接口
+     *
+     * @return 大整数构成的Vector，对应每一个明文字符
+     * @version 1.0, 19/09/03
+     * @author JinZhiyun
+     */
     public abstract Vector<BigInteger> encrypt();
+
+    public Vector<BigInteger> getCipherText() {
+        return cipherText;
+    }
 }
+
+
+//~ Formatted by Jindent --- http://www.jindent.com

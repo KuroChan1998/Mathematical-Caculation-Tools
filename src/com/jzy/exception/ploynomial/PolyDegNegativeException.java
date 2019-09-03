@@ -3,12 +3,11 @@ package com.jzy.exception.ploynomial;
 import com.jzy.exception.InputException;
 
 /**
+ * 多项式的输入次方小于0
+ *
  * @author JinZhiyun
- * @ClassName PolyDegNegativeException
- * @Description 多项式的输入次方小于0
- * @Date 2019/8/28 9:37
- * @Version 1.0
- **/
+ * @version 1.0, 19/09/02
+ */
 public class PolyDegNegativeException extends InputException {
     public PolyDegNegativeException() {
         super();
@@ -18,3 +17,6 @@ public class PolyDegNegativeException extends InputException {
         super(message);
     }
 }
+
+
+//~ Formatted by Jindent --- http://www.jindent.com

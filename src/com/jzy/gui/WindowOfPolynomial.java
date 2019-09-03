@@ -1,15 +1,3 @@
-/**
- * All rights Reserved, Designed By CyborgKuroChan
- *
- * @Title: WindowOfPolynomial.java
- * @Package com.jzy.gui
- * @Description: 多项式计算图形类
- * @author: JinZhiyun
- * @date: 2019年3月16日 下午12:41:45
- * @version V1.0
- * @Copyright: 2019 CyborgKuroChan All rights reserved.
- * 注意：本内容由超级酷乐酱开发(wechat:Jzy_bb_1998)
- */
 package com.jzy.gui;
 
 import java.awt.event.ActionEvent;
@@ -30,13 +18,10 @@ import com.jzy.xxaqsxjc.method1.Polynomial;
 import com.jzy.xxaqsxjc.method1.PolynomialBezoutEquationSolution;
 
 /**
- * @ClassName: WindowOfPolynomial
- * @Description: 多项式计算图形类
- * @author: JinZhiyun
- * @date: 2019年3月16日 下午12:41:45
+ * 多项式计算图形类
  *
- * @Copyright: 2019 CyborgKuroChan All rights reserved. 
- * 注意：本内容由超级酷乐酱开发(wechat:Jzy_bb_1998)
+ * @author JinZhiyun
+ * @version 1.0, 19/09/03
  */
 public class WindowOfPolynomial {
     /**

@@ -1,12 +1,11 @@
 package com.jzy.exception;
 
 /**
- * @ClassName InputException
- * @Author JinZhiyun
- * @Description 输入异常
- * @Date 2019/8/26 12:20
- * @Version 1.0
- **/
+ * 输入异常
+ *
+ * @author JinZhiyun
+ * @version 1.0, 19/09/02
+ */
 public class InputException extends RuntimeException {
     public InputException() {
         super();
@@ -16,3 +15,6 @@ public class InputException extends RuntimeException {
         super(message);
     }
 }
+
+
+//~ Formatted by Jindent --- http://www.jindent.com

@@ -1,15 +1,3 @@
-/**
- * All rights Reserved, Designed By CyborgKuroChan
- *
- * @Title: WindowOfPrimitiveRoot.java
- * @Package com.jzy.gui
- * @Description: 计算最小原根图形类
- * @author: JinZhiyun
- * @date: 2019年3月16日 下午12:29:17
- * @version V1.0
- * @Copyright: 2019 CyborgKuroChan All rights reserved.
- * 注意：本内容由超级酷乐酱开发(wechat:Jzy_bb_1998)
- */
 package com.jzy.gui;
 
 import java.awt.event.ActionEvent;
@@ -27,13 +15,10 @@ import com.jzy.xxaqsxjc.method0.PrimitiveRoot;
 import com.jzy.util.StringTest;
 
 /**
- * @ClassName: WindowOfPrimitiveRoot
- * @Description: 计算最小原根图形类
- * @author: JinZhiyun
- * @date: 2019年3月16日 下午12:29:17
+ * 计算最小原根图形类
  *
- * @Copyright: 2019 CyborgKuroChan All rights reserved. 
- * 注意：本内容由超级酷乐酱开发(wechat:Jzy_bb_1998)
+ * @author JinZhiyun
+ * @version 1.0, 19/09/03
  */
 public class WindowOfPrimitiveRoot {
     /**

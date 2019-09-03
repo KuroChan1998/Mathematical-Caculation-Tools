@@ -26,13 +26,10 @@ import com.jzy.util.StringTest;
 import com.jzy.xxaqsxjc.method0.Method0;
 
 /**
- * @ClassName: WindowOfPrimeTest
- * @Description: 素性检验图形类
- * @author: JinZhiyun
- * @date: 2019年3月16日 下午12:31:31
+ * 素性检验图形类
  *
- * @Copyright: 2019 CyborgKuroChan All rights reserved. 
- * 注意：本内容由超级酷乐酱开发(wechat:Jzy_bb_1998)
+ * @author JinZhiyun
+ * @version 1.0, 19/09/03
  */
 public class WindowOfPrimeTest {
     /**

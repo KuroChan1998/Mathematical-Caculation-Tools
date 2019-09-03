@@ -1,15 +1,3 @@
-/**
- * All rights Reserved, Designed By CyborgKuroChan
- *
- * @Title: WindowOfEllipticCurveCalculationOfF2n.java
- * @Package com.jzy.gui
- * @Description: F2n上的椭圆曲线y^2+xy=x^3+a2*x^2+a6的点的计算图形类
- * @author: JinZhiyun
- * @date: 2019年3月16日 下午7:04:39
- * @version V1.0
- * @Copyright: 2019 CyborgKuroChan All rights reserved.
- * 注意：本内容由超级酷乐酱开发(wechat:Jzy_bb_1998)
- */
 package com.jzy.gui;
 
 import java.awt.event.ActionEvent;
@@ -30,13 +18,10 @@ import com.jzy.xxaqsxjc.method1.Method1;
 import com.jzy.xxaqsxjc.method1.Polynomial;
 
 /**
- * @ClassName: WindowOfEllipticCurveCalculationOfF2n
- * @Description: F2n上的椭圆曲线y^2+xy=x^3+a2*x^2+a6的点的计算图形类
- * @author: JinZhiyun
- * @date: 2019年3月16日 下午7:04:39
+ * F2n上的椭圆曲线y^2+xy=x^3+a2*x^2+a6的点的计算图形类
  *
- * @Copyright: 2019 CyborgKuroChan All rights reserved. 
- * 注意：本内容由超级酷乐酱开发(wechat:Jzy_bb_1998)
+ * @author JinZhiyun
+ * @version 1.0, 19/09/03
  */
 public class WindowOfEllipticCurveCalculationOfF2n {
     /**
@@ -572,7 +557,6 @@ public class WindowOfEllipticCurveCalculationOfF2n {
                     Polynomial[] re = ellipticCurveCalculationOfF2N.pointAdd(p1, p2);
                     jtf16.setText("(" + re[0].toString() + "," + re[1].toString() + ")");
                 } catch (PolyDivideByZeroException e1) {
-                    // TODO Auto-generated catch block
                     e1.printStackTrace();
                 }
             }
@@ -590,7 +574,6 @@ public class WindowOfEllipticCurveCalculationOfF2n {
                         Polynomial[] re = ellipticCurveCalculationOfF2N.kPoint(p1, k);
                         jtf18.setText("(" + re[0].toString() + "," + re[1].toString() + ")");
                     } catch (PolyDivideByZeroException e1) {
-                        // TODO Auto-generated catch block
                         e1.printStackTrace();
                     }
                 }

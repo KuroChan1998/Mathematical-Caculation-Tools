@@ -1,7 +1,7 @@
 package com.jzy.xxaqsxjc.encyption.factory;
 
 import com.jzy.xxaqsxjc.encyption.Encryption;
-import com.jzy.xxaqsxjc.encyption.EncyptionAlgorithm;
+import com.jzy.xxaqsxjc.encyption.EncryptionAlgorithm;
 
 /**
  * @ClassName EncryptionFactory
@@ -18,8 +18,8 @@ public class EncryptionFactory {
      * @Date 18:30 2019/8/27
      * @Param [encyption]
      **/
-    public static Encryption getEncryption(EncyptionAlgorithm encyptionAlgorithm) {
-        switch (encyptionAlgorithm) {
+    public static Encryption getEncryption(EncryptionAlgorithm encryptionAlgorithm) {
+        switch (encryptionAlgorithm) {
             case RSA:
                 return new RSAEncryptionFactory().getInstance();
             case Paillier:

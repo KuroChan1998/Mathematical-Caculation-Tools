@@ -1,15 +1,3 @@
-/**
- * All rights Reserved, Designed By CyborgKuroChan
- *
- * @Title: WindowOfPaillierEncryption.java
- * @Package com.jzy.gui
- * @Description: Paillier加密算法类
- * @author: JinZhiyun
- * @date: 2019年3月16日 下午12:35:37
- * @version V1.0
- * @Copyright: 2019 CyborgKuroChan All rights reserved.
- * 注意：本内容由超级酷乐酱开发(wechat:Jzy_bb_1998)
- */
 package com.jzy.gui;
 
 import java.awt.event.ActionEvent;
@@ -20,18 +8,15 @@ import javax.swing.*;
 
 import com.jzy.util.StringTest;
 import com.jzy.xxaqsxjc.encyption.Encryptions;
-import com.jzy.xxaqsxjc.encyption.EncyptionAlgorithm;
+import com.jzy.xxaqsxjc.encyption.EncryptionAlgorithm;
 import com.jzy.xxaqsxjc.encyption.algorithm.PaillierEncryption;
 import com.jzy.xxaqsxjc.encyption.factory.EncryptionFactory;
 
 /**
- * @ClassName: WindowOfPaillierEncryption
- * @Description: Paillier加密算法类
- * @author: JinZhiyun
- * @date: 2019年3月16日 下午12:35:37
+ * Paillier加密算法类
  *
- * @Copyright: 2019 CyborgKuroChan All rights reserved. 
- * 注意：本内容由超级酷乐酱开发(wechat:Jzy_bb_1998)
+ * @author JinZhiyun
+ * @version 1.0, 19/09/03
  */
 public class WindowOfPaillierEncryption {
 
@@ -146,7 +131,7 @@ public class WindowOfPaillierEncryption {
         btn.addActionListener(new ActionListener() { // 按钮响应事件
             @Override
             public void actionPerformed(ActionEvent e) {
-                PaillierEncryption paillierEncryption = (PaillierEncryption) EncryptionFactory.getEncryption(EncyptionAlgorithm.Paillier);
+                PaillierEncryption paillierEncryption = (PaillierEncryption) EncryptionFactory.getEncryption(EncryptionAlgorithm.Paillier);
                 paillierEncryption.setPlainText(jtf1.getText());
                 jtf3.setText(PaillierEncryption.getEulerN().toString());
                 jtf4.setText(PaillierEncryption.getL1().toString());

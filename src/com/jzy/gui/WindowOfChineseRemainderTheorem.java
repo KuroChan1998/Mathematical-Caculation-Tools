@@ -1,49 +1,28 @@
-/**
- * All rights Reserved, Designed By CyborgKuroChan
- *
- * @Title: WindowOfChineseRemainderTheorem.java
- * @Package com.jzy.gui
- * @Description: 中国剩余定理求解图形类
- * @author: JinZhiyun
- * @date: 2019年3月16日 下午12:40:12
- * @version V1.0
- * @Copyright: 2019 CyborgKuroChan All rights reserved.
- * 注意：本内容由超级酷乐酱开发(wechat:Jzy_bb_1998)
- */
 package com.jzy.gui;
 
-import java.awt.Color;
+import com.jzy.util.BigIntegerTest;
+import com.jzy.util.StringTest;
+import com.jzy.xxaqsxjc.method0.Method0;
+
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.math.BigInteger;
 
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JTextField;
-
-import com.jzy.util.BigIntegerTest;
-import com.jzy.util.StringTest;
-import com.jzy.xxaqsxjc.method0.ChineseRemainderTheorem;
-import com.jzy.xxaqsxjc.method0.Method0;
-
 /**
- * @ClassName: WindowOfChineseRemainderTheorem
- * @Description: 中国剩余定理求解图形类
- * @author: JinZhiyun
- * @date: 2019年3月16日 下午12:40:12
+ * 中国剩余定理求解图形类
  *
- * @Copyright: 2019 CyborgKuroChan All rights reserved. 
- * 注意：本内容由超级酷乐酱开发(wechat:Jzy_bb_1998)
+ * @author JinZhiyun
+ * @version 1.0, 19/09/03
  */
 public class WindowOfChineseRemainderTheorem {
     /**
-     * @Title: GUIChineseRemainderTheorem
-     * @Description: 设置中国剩余定理求解图形模块
-     * @param: @param frm
-     * @return: void
-     * @throws
+     * 设置中国剩余定理求解图形模块
+     *
+     * @param frm
+     * @version 1.0, 19/09/03
+     * @author JinZhiyun
      */
     public static void GUIChineseRemainderTheorem(JFrame frm) {
         JLabel j11 = new JLabel("11、中国剩余定理求解，方程组：x同余b 模 m，输入方程个数n，以及每个方程的系数，返回解x=?+?*q(q为整数)");
@@ -71,11 +50,11 @@ public class WindowOfChineseRemainderTheorem {
     }
 
     /**
-     * @Title: GUIChineseRemainderTheoremHidden
-     * @Description: 点击进入后的中国剩余定理求解图形模块
-     * @param: @param frm
-     * @return: void
-     * @throws
+     * 点击进入后的中国剩余定理求解图形模块
+     *
+     * @param frm
+     * @version 1.0, 19/09/03
+     * @author JinZhiyun
      */
     public static void GUIChineseRemainderTheoremHidden(JFrame frm) {
         JLabel j12 = new JLabel("请先输入方程个数n：");

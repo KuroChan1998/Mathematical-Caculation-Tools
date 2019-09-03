@@ -3,12 +3,11 @@ package com.jzy.exception.encryption;
 import com.jzy.exception.InputException;
 
 /**
- * @ClassName NotBinaryStringException
- * @Author JinZhiyun
- * @Description 输入串没有仅仅含有0,1
- * @Date 2019/8/27 19:29
- * @Version 1.0
- **/
+ * 输入串没有仅仅含有0,1的异常
+ *
+ * @author JinZhiyun
+ * @version 1.0, 19/09/02
+ */
 public class NotBinaryStringException extends InputException {
     public NotBinaryStringException() {
         super();
@@ -18,3 +17,6 @@ public class NotBinaryStringException extends InputException {
         super(message);
     }
 }
+
+
+//~ Formatted by Jindent --- http://www.jindent.com

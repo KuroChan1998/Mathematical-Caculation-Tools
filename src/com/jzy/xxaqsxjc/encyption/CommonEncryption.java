@@ -3,26 +3,24 @@ package com.jzy.xxaqsxjc.encyption;
 import com.jzy.xxaqsxjc.encyption.executor.CommonEncryptExecutor;
 
 /**
- * @ClassName BinaryEncryptionExecutor
- * @Author JinZhiyun
- * @Description 通用加密类
- * @Date 2019/8/26 18:34
- * @Version 1.0
- **/
+ * 通用加密类，拥有把字符串形式明文加密成字符串形式密文的特性，抽象类用以继承，实现通用加密执行器接口{@link CommonEncryptExecutor}
+ *
+ * @author JinZhiyun
+ * @version 1.0, 19/09/03
+ */
 public abstract class CommonEncryption extends Encryption implements CommonEncryptExecutor {
-    protected String cipherText; // 密文
-
-    public String getCipherText() {
-        return cipherText;
-    }
 
     /**
-     * @return
-     * @Author JinZhiyun
-     * @Description 默认构造器
-     * @Date 21:10 2019/8/26
-     * @Param []
-     **/
+     * 密文，字符串形式
+     */
+    protected String cipherText;
+
+    /**
+     * 默认构造器
+     *
+     * @version 1.0, 19/09/03
+     * @author JinZhiyun
+     */
     public CommonEncryption() {
         this.plainText = "";
         this.cipherText = "";
@@ -30,10 +28,11 @@ public abstract class CommonEncryption extends Encryption implements CommonEncry
     }
 
     /**
-     * @throws
-     * @Title: RSAEncryption
-     * @Description: 构造器完成入参为明文plainText
-     * @param: @param plainText
+     * 构造器入参明文，设置plainText变量
+     *
+     * @param plainText 明文
+     * @version 1.0, 19/09/03
+     * @author JinZhiyun
      */
     public CommonEncryption(String plainText) {
         this.plainText = plainText;
@@ -42,25 +41,18 @@ public abstract class CommonEncryption extends Encryption implements CommonEncry
     }
 
     /**
-     * @Author JinZhiyun
-     * @Description 构造器完成入参
-     * @Date 19:30 2019/8/27
-     * @Param [plainText, cipherText, decryptedPlainText]
-     * @return
-     **/
-    public CommonEncryption(String plainText, String cipherText, String decryptedPlainText) {
-        this.plainText = plainText;
-        this.cipherText = cipherText;
-        this.decryptedPlainText = decryptedPlainText;
-    }
-
-    /**
-     * @throws
-     * @Title: encrypt
-     * @Description: 加密返回密文（字符串形式）
-     * @param: @return
-     * @return: String
+     * 加密方法，将明文加密成字符串形式的密文，向上参见CommonEncryptExecutor接口
+     *
+     * @return 字符串形式的密文
+     * @version 1.0, 19/09/03
+     * @author JinZhiyun
      */
     public abstract String encrypt();
 
+    public String getCipherText() {
+        return cipherText;
+    }
 }
+
+
+//~ Formatted by Jindent --- http://www.jindent.com

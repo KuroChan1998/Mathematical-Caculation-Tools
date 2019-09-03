@@ -1,20 +1,8 @@
-/**
- * All rights Reserved, Designed By CyborgKuroChan
- *
- * @Title: WindowOfRSAEncryption.java
- * @Package com.jzy.gui
- * @Description: RSA加密算法 图形类
- * @author: JinZhiyun
- * @date: 2019年3月16日 下午12:33:39
- * @version V1.0
- * @Copyright: 2019 CyborgKuroChan All rights reserved.
- * 注意：本内容由超级酷乐酱开发(wechat:Jzy_bb_1998)
- */
 package com.jzy.gui;
 
 import com.jzy.util.StringTest;
+import com.jzy.xxaqsxjc.encyption.EncryptionAlgorithm;
 import com.jzy.xxaqsxjc.encyption.Encryptions;
-import com.jzy.xxaqsxjc.encyption.EncyptionAlgorithm;
 import com.jzy.xxaqsxjc.encyption.algorithm.RSAEncryption;
 import com.jzy.xxaqsxjc.encyption.factory.EncryptionFactory;
 
@@ -24,12 +12,10 @@ import java.awt.event.ActionListener;
 import java.math.BigInteger;
 
 /**
- * @ClassName: WindowOfRSAEncryption
- * @Description: RSA加密算法 图形类
- * @author: JinZhiyun
- * @date: 2019年3月16日 下午12:33:39
- * @Copyright: 2019 CyborgKuroChan All rights reserved.
- * 注意：本内容由超级酷乐酱开发(wechat:Jzy_bb_1998)
+ * RSA加密算法图形类
+ *
+ * @author JinZhiyun
+ * @version 1.0, 19/09/03
  */
 public class WindowOfRSAEncryption {
 
@@ -136,7 +122,7 @@ public class WindowOfRSAEncryption {
         btn.addActionListener(new ActionListener() { // 按钮响应事件
             @Override
             public void actionPerformed(ActionEvent e) {
-                RSAEncryption rsaEncryption = (RSAEncryption) EncryptionFactory.getEncryption(EncyptionAlgorithm.RSA);
+                RSAEncryption rsaEncryption = (RSAEncryption) EncryptionFactory.getEncryption(EncryptionAlgorithm.RSA);
                 rsaEncryption.setPlainText(jtf1.getText());
                 jtf3.setText(RSAEncryption.getD().toString());
                 jtf4.setText(RSAEncryption.getN().toString());

@@ -3,12 +3,11 @@ package com.jzy.exception.integer;
 import com.jzy.exception.InputException;
 
 /**
- * @ClassName InputTooManyBigIntegerInputException
- * @Author JinZhiyun
- * @Description 输入的大整数数组长度过大
- * @Date 2019/8/25 21:04
- * @Version 1.0
- **/
+ * 输入的大整数数组长度过大的异常
+ *
+ * @author JinZhiyun
+ * @version 1.0, 19/09/02
+ */
 public class InputTooManyBigIntegerInputException extends InputException {
     public InputTooManyBigIntegerInputException() {
         super();
@@ -18,3 +17,6 @@ public class InputTooManyBigIntegerInputException extends InputException {
         super(message);
     }
 }
+
+
+//~ Formatted by Jindent --- http://www.jindent.com

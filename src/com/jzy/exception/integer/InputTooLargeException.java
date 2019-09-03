@@ -3,12 +3,11 @@ package com.jzy.exception.integer;
 import com.jzy.exception.InputException;
 
 /**
- * @ClassName InputTooLargeException
- * @Author JinZhiyun
- * @Description 输入的数值过大
- * @Date 2019/8/25 22:06
- * @Version 1.0
- **/
+ * 输入的数值过大的异常
+ *
+ * @author JinZhiyun
+ * @version 1.0, 19/09/02
+ */
 public class InputTooLargeException extends InputException {
     public InputTooLargeException() {
         super();
@@ -18,3 +17,6 @@ public class InputTooLargeException extends InputException {
         super(message);
     }
 }
+
+
+//~ Formatted by Jindent --- http://www.jindent.com

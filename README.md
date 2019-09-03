@@ -22,7 +22,7 @@
 
 ### 使用开发工具建立项目并运行
 
-如果您装有jdk，以及idea、eclipse等开发环境和开发工具，可以导入的我源码（在src中），找到com.jzy.gui.GUIWindow.Main.java文件直接运行。
+如果您装有jdk，以及idea、eclipse等开发环境和开发工具，可以导入的我源码（在src中），找到com.jzy.app.Main.java文件直接运行。
 
 ![Snipaste_2019-08-28_13-23-40](screenshot/Snipaste_2019-08-28_13-23-40.jpg)
 
@@ -72,7 +72,11 @@
 
 这里省略对于图形界面的使用教程，正常脑壳的人都能上手。
 
-代码中对您有用的api大部分都涵盖在了`com.jzy.xxaqsxjc`包下，所有代码都有详细的注释，这里列举关键方法和部分示例。
+* 代码中对您有用的api大部分都涵盖在了`com.jzy.xxaqsxjc`包下，所有代码都有详细的注释
+
+* 代码文档详见`docs/index.html
+
+这里列举关键方法概览和部分示例。
 
 ### com.jzy.xxaqsxjc.method0 
 
@@ -228,14 +232,14 @@ public class Test {
   * 方法三：通过工厂获得加密类实例（单例），再通过setPlainText方法传入明文
 
     ```java
-    import com.jzy.xxaqsxjc.encyption.EncyptionAlgorithm;
+    import com.jzy.xxaqsxjc.encyption.EncryptionAlgorithm;
     import com.jzy.xxaqsxjc.encyption.algorithm.RSAEncryption;
     import com.jzy.xxaqsxjc.encyption.factory.EncryptionFactory;
     
     public class Test {
         public static void main(String[] args) {
             //传入枚举参数RSA，从工厂获得实例
-            RSAEncryption rsa1 = (RSAEncryption) EncryptionFactory.getEncryption(EncyptionAlgorithm.RSA);
+            RSAEncryption rsa1 = (RSAEncryption) EncryptionFactory.getEncryption(EncryptionAlgorithm.RSA);
             rsa1.setPlainText("我是明文");
             rsa1.show();
         }
@@ -247,14 +251,14 @@ public class Test {
     默认密钥在编译代码时确定，默认位宽1024bit。可以通过resetKeys()静态方法重置（指定位宽）密钥
 
     ```java
-    import com.jzy.xxaqsxjc.encyption.EncyptionAlgorithm;
+    import com.jzy.xxaqsxjc.encyption.EncryptionAlgorithm;
     import com.jzy.xxaqsxjc.encyption.algorithm.RSAEncryption;
     import com.jzy.xxaqsxjc.encyption.factory.EncryptionFactory;
     
     public class Test {
         public static void main(String[] args) {
             //传入枚举参数RSA，从工厂获得实例
-            RSAEncryption rsa1 = (RSAEncryption) EncryptionFactory.getEncryption(EncyptionAlgorithm.RSA);
+            RSAEncryption rsa1 = (RSAEncryption) EncryptionFactory.getEncryption(EncryptionAlgorithm.RSA);
             rsa1.setPlainText("我是明文");
             rsa1.show();
             //重置密钥位宽512bit

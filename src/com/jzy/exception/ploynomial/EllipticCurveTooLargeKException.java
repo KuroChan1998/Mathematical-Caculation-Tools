@@ -3,12 +3,11 @@ package com.jzy.exception.ploynomial;
 import com.jzy.exception.InputException;
 
 /**
+ * 输入的k倍点k值过大的异常
+ *
  * @author JinZhiyun
- * @ClassName EllipticCurveTooLargeKException
- * @Description 输入的k倍点k值过大
- * @Date 2019/8/28 11:08
- * @Version 1.0
- **/
+ * @version 1.0, 19/09/02
+ */
 public class EllipticCurveTooLargeKException extends InputException {
     public EllipticCurveTooLargeKException() {
         super();
@@ -18,3 +17,6 @@ public class EllipticCurveTooLargeKException extends InputException {
         super(message);
     }
 }
+
+
+//~ Formatted by Jindent --- http://www.jindent.com

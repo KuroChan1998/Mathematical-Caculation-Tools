@@ -22,16 +22,12 @@ import com.jzy.util.StringTest;
 import com.jzy.xxaqsxjc.method0.Method0;
 
 /**
- * @ClassName: WindowOfLegendreAndJacobi
- * @Description: 勒让得符号和雅可比符号计算图形类
- * @author: JinZhiyun
- * @date: 2019年3月16日 下午12:27:22
+ * 勒让得符号和雅可比符号计算图形类
  *
- * @Copyright: 2019 CyborgKuroChan All rights reserved. 
- * 注意：本内容由超级酷乐酱开发(wechat:Jzy_bb_1998)
+ * @author JinZhiyun
+ * @version 1.0, 19/09/03
  */
 public class WindowOfLegendreAndJacobi {
-
 
     /**
      * @Title: GUILegendreAndJacobi

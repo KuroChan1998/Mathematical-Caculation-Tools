@@ -1,15 +1,3 @@
-/**
- * All rights Reserved, Designed By CyborgKuroChan
- *
- * @Title: WindowOfGoldwasserMicaliBinaryEncryption.java
- * @Package com.jzy.gui
- * @Description: GoldwasserMicali加密算法（对二进制加密）图形类
- * @author: JinZhiyun
- * @date: 2019年3月16日 下午12:38:14
- * @version V1.0
- * @Copyright: 2019 CyborgKuroChan All rights reserved.
- * 注意：本内容由超级酷乐酱开发(wechat:Jzy_bb_1998)
- */
 package com.jzy.gui;
 
 import java.awt.event.ActionEvent;
@@ -25,19 +13,16 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 import com.jzy.xxaqsxjc.encyption.Encryptions;
-import com.jzy.xxaqsxjc.encyption.EncyptionAlgorithm;
+import com.jzy.xxaqsxjc.encyption.EncryptionAlgorithm;
 import com.jzy.xxaqsxjc.encyption.algorithm.GoldwasserMicaliBinaryEncryption;
 import com.jzy.util.StringTest;
 import com.jzy.xxaqsxjc.encyption.factory.EncryptionFactory;
 
 /**
- * @ClassName: WindowOfGoldwasserMicaliBinaryEncryption
- * @Description: GoldwasserMicali加密算法（对二进制加密）图形类  
- * @author: JinZhiyun
- * @date: 2019年3月16日 下午12:38:14
+ * GoldwasserMicali加密算法（对二进制加密）图形类
  *
- * @Copyright: 2019 CyborgKuroChan All rights reserved. 
- * 注意：本内容由超级酷乐酱开发(wechat:Jzy_bb_1998)
+ * @author JinZhiyun
+ * @version 1.0, 19/09/03
  */
 public class WindowOfGoldwasserMicaliBinaryEncryption {
     /**
@@ -155,7 +140,7 @@ public class WindowOfGoldwasserMicaliBinaryEncryption {
                 if (!StringTest.isOnlyContain01(jtf1.getText())) {
                     JOptionPane.showMessageDialog(null, "仅能输入含0或1的字符串！");
                 } else {
-                    GoldwasserMicaliBinaryEncryption binaryEncryption = (GoldwasserMicaliBinaryEncryption) EncryptionFactory.getEncryption(EncyptionAlgorithm.GoldwasserMicali);
+                    GoldwasserMicaliBinaryEncryption binaryEncryption = (GoldwasserMicaliBinaryEncryption) EncryptionFactory.getEncryption(EncryptionAlgorithm.GoldwasserMicali);
                     binaryEncryption.setPlainText(jtf1.getText());
                     jtf3.setText(GoldwasserMicaliBinaryEncryption.getP().toString());
                     jtf4.setText(GoldwasserMicaliBinaryEncryption.getQ().toString());
