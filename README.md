@@ -10,15 +10,9 @@
 
 ## 快速上手
 
-### 运行exe
-
-对大部分同学而言，在64位windows操作系统上可直接双击运行`Mathematical-Caculation-Tools.exe`
-
-![Snipaste_2019-08-28_13-20-32](screenshot/Snipaste_2019-08-28_13-20-32.jpg)
-
 ### 使用jar包
 
-在装有jre（>1.5）的机器上直接双击`Mathematical-Caculation-Tools.jar`也可以直接得到图形界面
+在装有jre（>1.5）的机器上直接双击`Mathematical-Caculation-Tools.jar`可以直接得到图形界面
 
 ### 使用开发工具建立项目并运行
 
