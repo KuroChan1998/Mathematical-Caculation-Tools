@@ -28,5 +28,6 @@ build/
 .vscode/
 
 
-/exe/
+/Mathematical-Caculation-Tools-exe/
 *.exe4j
+*.rar
