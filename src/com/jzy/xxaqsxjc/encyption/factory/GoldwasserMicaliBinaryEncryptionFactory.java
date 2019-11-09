@@ -16,6 +16,7 @@ public class GoldwasserMicaliBinaryEncryptionFactory implements EncryptionBuilde
     public GoldwasserMicaliBinaryEncryptionFactory() {
     }
 
+    @Override
     public Encryption getInstance() {
         if (encryption == null) {
             synchronized (PaillierEncryptionFactory.class) {

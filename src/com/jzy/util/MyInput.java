@@ -11,6 +11,7 @@ import java.util.Scanner;
  * @version 1.0, 19/09/03
  */
 public class MyInput {
+    private MyInput(){}
 
     /**
      * 命令行输入一个大整数

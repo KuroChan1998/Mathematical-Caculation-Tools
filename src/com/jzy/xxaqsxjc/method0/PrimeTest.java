@@ -324,12 +324,4 @@ public class PrimeTest {
             return 1;
         }
     }
-
-//  public static void main(String[] args) {
-//      System.out.println(primeFactor(new BigInteger("46116860184270")));
-//      System.out.println(Long.MAX_VALUE);
-//  }
 }
-
-
-//~ Formatted by Jindent --- http://www.jindent.com

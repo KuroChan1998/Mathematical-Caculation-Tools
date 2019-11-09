@@ -16,6 +16,7 @@ public class PaillierEncryptionFactory implements EncryptionBuilder {
     public PaillierEncryptionFactory() {
     }
 
+    @Override
     public Encryption getInstance() {
         if (encryption == null) {
             synchronized (PaillierEncryptionFactory.class) {

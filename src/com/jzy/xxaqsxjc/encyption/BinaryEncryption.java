@@ -52,6 +52,7 @@ public abstract class BinaryEncryption extends Encryption implements BinaryEncry
      * @version 1.0, 19/09/03
      * @author JinZhiyun
      */
+    @Override
     public abstract Vector<BigInteger> encrypt();
 
     public Vector<BigInteger> getCipherText() {

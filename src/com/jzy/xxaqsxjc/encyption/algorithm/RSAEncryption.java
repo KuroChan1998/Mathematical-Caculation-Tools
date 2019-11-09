@@ -84,6 +84,7 @@ public class RSAEncryption extends CommonEncryption {
      * @version 1.0, 19/09/03
      * @author JinZhiyun
      */
+    @Override
     public String decrypt() throws NotEncryptedException {
         if (!isEncrypted()) {
             throw new NotEncryptedException("当前对象还未加密，请先加密！");
@@ -108,6 +109,7 @@ public class RSAEncryption extends CommonEncryption {
      * @version 1.0, 19/09/03
      * @author JinZhiyun
      */
+    @Override
     public String encrypt() {
         resetAllTextsExceptPlainText();
 
@@ -125,44 +127,13 @@ public class RSAEncryption extends CommonEncryption {
         return cipherText;
     }
 
-//    public static void main(String[] args) {
-//
-//        Scanner scan = new Scanner(System.in);
-//
-//        System.out.print("请输入明文消息：");
-//
-//        String str1;
-//
-//        if (scan.hasNextLine()) {
-//            str1 = scan.nextLine();
-//        } else {
-//            System.out.println("发生错误！");
-//            scan.close();
-//
-//            return;
-//        }
-//
-//        scan.close();
-//
-//        RSAEncryption rsa1 = new RSAEncryption("sdasd");
-//
-//        rsa1.show();
-//        RSAEncryption.resetKeys(25);
-//        rsa1.setPlainText("1231");
-//
-////      rsa1.resetAllTexts();
-//        System.out.println(rsa1.encrypt());
-//        System.out.println(rsa1.encrypt());
-//        System.out.println(rsa1.decrypt());
-//        rsa1.show();
-//    }
-
-
+    @Override
     public void resetAllTexts() {
         this.plainText = "";
         resetAllTextsExceptPlainText();
     }
 
+    @Override
     public void resetAllTextsExceptPlainText() {
         this.cipherText = "";
         this.decryptedPlainText = "";
@@ -224,6 +195,7 @@ public class RSAEncryption extends CommonEncryption {
         d = Method0.bezoutSolveQrS11(e, EulerN);
     }
 
+    @Override
     public void show() {
         System.out.println("随机生成" + keysBitLength + "位大素数p=" + p);
         System.out.println("随机生成" + keysBitLength + "位大素数q=" + q);

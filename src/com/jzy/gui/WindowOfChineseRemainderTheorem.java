@@ -145,7 +145,7 @@ public class WindowOfChineseRemainderTheorem {
                                         return;
                                     }
                                 }
-                                BigInteger[] x = Method0.solve(b, m);
+                                BigInteger[] x = Method0.solveChineseRemainderTheorem(b, m);
 
                                 jtf5.setText(x[0] + "+" + x[1] + "*q(q为整数)");
 

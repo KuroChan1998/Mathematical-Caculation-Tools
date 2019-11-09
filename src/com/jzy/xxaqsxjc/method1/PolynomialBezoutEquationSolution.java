@@ -59,15 +59,6 @@ public class PolynomialBezoutEquationSolution {
         flag = true;
     }
 
-//    public static void main(String[] args) throws PolyDivideByZeroException {
-//        int[] a = {1, 1};
-//        int[] b = {1, 1, 0, 1};
-//        Polynomial pa = new Polynomial();
-//        Polynomial pb = new Polynomial(b);
-//
-//        System.out.println(new PolynomialBezoutEquationSolution().polynomialBezoutSolveQrS11(pa, pb));
-//    }
-
     /**
      * 计算出系数多项式s
      *

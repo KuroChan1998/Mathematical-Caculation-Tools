@@ -34,6 +34,7 @@ public abstract class Encryption implements EncryptExecutor, DecryptionExecutor 
      * @version 1.0, 19/09/03
      * @author JinZhiyun
      */
+    @Override
     public abstract String decrypt();
 
     /**

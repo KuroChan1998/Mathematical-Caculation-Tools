@@ -89,6 +89,7 @@ public class PaillierEncryption extends CommonEncryption {
      * @version 1.0, 19/09/03
      * @author JinZhiyun
      */
+    @Override
     public String decrypt() throws NotEncryptedException {
         if (!isEncrypted()) {
             throw new NotEncryptedException("当前对象还未加密，请先加密！");
@@ -115,6 +116,7 @@ public class PaillierEncryption extends CommonEncryption {
      * @version 1.0, 19/09/03
      * @author JinZhiyun
      */
+    @Override
     public String encrypt() {
         resetAllTextsExceptPlainText();
 
@@ -140,41 +142,13 @@ public class PaillierEncryption extends CommonEncryption {
         return cipherText;
     }
 
-//    public static void main(String[] args) {
-//        Scanner scan = new Scanner(System.in);
-//
-//        System.out.print("请输入明文消息：");
-//
-//        String str1;
-//
-//        if (scan.hasNextLine()) {
-//            str1 = scan.nextLine();
-//        } else {
-//            System.out.println("发生错误！");
-//            scan.close();
-//
-//            return;
-//        }
-//
-//        scan.close();
-//
-//        PaillierEncryption pe1 = new PaillierEncryption(str1);
-//
-//        pe1.show();
-//        PaillierEncryption.resetKeys(120);
-//        pe1.setPlainText("asdadasd");
-//        System.out.println(pe1.encrypt());
-//        System.out.println(pe1.encrypt());
-//        System.out.println(pe1.decrypt());
-//        PaillierEncryption.resetKeys();
-//        pe1.show();
-//    }
-
+    @Override
     public void resetAllTexts() {
         this.plainText = "";
         resetAllTextsExceptPlainText();
     }
 
+    @Override
     public void resetAllTextsExceptPlainText() {
         this.cipherText = "";
         this.decryptedPlainText = "";
@@ -234,6 +208,7 @@ public class PaillierEncryption extends CommonEncryption {
         L_1 = Method0.bezoutSolveQrS11(EulerN, n);
     }
 
+    @Override
     public void show() {
         System.out.println("随机生成" + keysBitLength + "位大素数p=" + p);
         System.out.println("随机生成" + keysBitLength + "位大素数q=" + q);

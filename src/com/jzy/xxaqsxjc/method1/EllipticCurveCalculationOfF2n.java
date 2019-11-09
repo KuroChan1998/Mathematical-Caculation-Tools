@@ -50,36 +50,6 @@ public class EllipticCurveCalculationOfF2n {
         this.a6 = a6;
     }
 
-//    public static void main(String[] args) throws PolyDivideByZeroException {
-//
-//        Polynomial curvePolynomial = new Polynomial(new int[]{
-//                1, 0, 1, 1, 1, 0, 0, 0, 1
-//        });
-//
-////      Polynomial curvePolynomial=new Polynomial(new int[] {1,1,0,1});
-//        EllipticCurveCalculationOfF2n ecc = new EllipticCurveCalculationOfF2n(curvePolynomial,
-//                new Polynomial(),
-//                new Polynomial());
-//        int[] a = {1, 0, 0, 1};
-//        int[] b = {
-//                0, 1, 1, 1, 0, 1, 1, 1
-//        };
-//
-////      int []a= {0,1};
-////      int []b= {1,1,1};
-//        Polynomial[] p1 = {new Polynomial(a), new Polynomial(b)};
-//        ArrayList<Polynomial[]> rs = ecc.kPointSet(p1, 34);
-//
-//        for (int i = 0; i < rs.size(); i++) {
-//            System.out.println("x" + (i + 1) + "=" + rs.get(i)[0]);
-//            System.out.println("y" + (i + 1) + "=" + rs.get(i)[1]);
-//            System.out.println();
-//        }
-//
-//        System.out.println(ecc.kPoint(p1, 10000)[0]);
-//        System.out.println(ecc.kPoint(p1, 10000)[1]);
-//    }
-
     /**
      * 计算k倍的p1
      * <p>e.g. 4(x^2+x,x)-->返回计算结果(px,py)<br>

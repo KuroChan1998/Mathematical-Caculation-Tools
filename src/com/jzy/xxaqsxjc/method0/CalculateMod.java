@@ -43,70 +43,6 @@ public class CalculateMod {
         return (b.modPow(n, m));
     }
 
-//    public static void main(String[] args) {
-//
-//        BigInteger b, n, m, a, n1;
-//        Scanner    scan = new Scanner(System.in);
-//
-//        System.out.print("请输入正整数b：");
-//
-//        if (scan.hasNextBigInteger()) {
-//            b = scan.nextBigInteger();
-//        } else {
-//            System.out.println("发生错误！");
-//            scan.close();
-//
-//            return;
-//        }
-//
-//        System.out.print("请输入正整数n：");
-//
-//        if (scan.hasNextBigInteger()) {
-//            n = scan.nextBigInteger();
-//        } else {
-//            System.out.println("发生错误！");
-//            scan.close();
-//
-//            return;
-//        }
-//
-//        System.out.print("请输入正整数m：");
-//
-//        if (scan.hasNextBigInteger()) {
-//            m = scan.nextBigInteger();
-//        } else {
-//            System.out.println("发生错误！");
-//            scan.close();
-//
-//            return;
-//        }
-//
-//        System.out.println(b + "^" + n + "模" + m + "=" + CalculateMod.calculateMod(b, n, m));
-//        System.out.print("请输入正整数a：");
-//
-//        if (scan.hasNextBigInteger()) {
-//            a = scan.nextBigInteger();
-//        } else {
-//            System.out.println("发生错误！");
-//            scan.close();
-//
-//            return;
-//        }
-//
-//        System.out.print("请输入正整数n：");
-//
-//        if (scan.hasNextBigInteger()) {
-//            n1 = scan.nextBigInteger();
-//        } else {
-//            System.out.println("发生错误！");
-//            scan.close();
-//
-//            return;
-//        }
-//
-//        scan.close();
-//        System.out.println(a + "模" + n1 + "=" + CalculateMod.transferAbsMinRemainder(a, n1));
-//    }
 
     /**
      * 把a转换成模n的绝对值最小余数
@@ -135,6 +71,3 @@ public class CalculateMod {
         return tmp;
     }
 }
-
-
-//~ Formatted by Jindent --- http://www.jindent.com

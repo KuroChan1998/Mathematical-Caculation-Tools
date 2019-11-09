@@ -318,7 +318,7 @@ public class Method0 {
      * @version 1.0, 19/09/02
      * @author JinZhiyun
      */
-    public static BigInteger[] solve(BigInteger[] b, BigInteger[] m) {
+    public static BigInteger[] solveChineseRemainderTheorem(BigInteger[] b, BigInteger[] m) {
         return ChineseRemainderTheorem.solve(b, m);
     }
 

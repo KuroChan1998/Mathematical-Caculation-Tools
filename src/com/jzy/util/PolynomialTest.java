@@ -10,6 +10,7 @@ import com.jzy.xxaqsxjc.method1.Polynomial;
  * @version 1.0, 19/09/03
  */
 public class PolynomialTest {
+    private PolynomialTest(){}
 
     /**
      * 验证输入多项式是否=1

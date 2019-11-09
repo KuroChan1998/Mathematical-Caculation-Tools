@@ -12,6 +12,7 @@ import com.jzy.xxaqsxjc.method0.Method0;
  * @version 1.0, 19/09/03
  */
 public class BigIntegerTest {
+    private BigIntegerTest(){}
 
     /**
      * 判断大数x是否等于1

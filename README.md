@@ -43,6 +43,7 @@
     └─com
         └─jzy
             ├─app    //主函数入口
+            ├─demo    //使用示例
             ├─exception    //异常处理类根目录
             │  ├─encryption    //加密类的异常
             │  ├─integer    //整数域计算方法的异常
@@ -74,7 +75,7 @@
 
 * 代码文档详见`docs/index.html`
 
-这里列举关键方法概览和部分示例。
+这里列举关键方法概览和部分示例。更多的示例请参见`com.jzy.demo`包
 
 ### com.jzy.xxaqsxjc.method0 
 
@@ -125,7 +126,9 @@ import com.jzy.xxaqsxjc.method1.Polynomial;
 
 public class Test {
     public static void main(String[] args) {
+        //1+x+x^2+x^4
         int[] a = {1, 1, 1, 0, 1};
+        //1+x^2+x^3+x^4+x^8
         int[] b = {1, 0, 1, 1, 1, 0, 0, 0, 1};
         Polynomial pa = new Polynomial(a);
         Polynomial pb = new Polynomial(b);

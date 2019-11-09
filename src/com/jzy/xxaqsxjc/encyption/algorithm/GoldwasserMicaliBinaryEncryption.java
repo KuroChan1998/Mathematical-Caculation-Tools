@@ -67,6 +67,7 @@ public class GoldwasserMicaliBinaryEncryption extends BinaryEncryption {
      * @version 1.0, 19/09/03
      * @author JinZhiyun
      */
+    @Override
     public String decrypt() throws NotEncryptedException {
         if (!isEncrypted()) {
             throw new NotEncryptedException("当前对象还未加密，请先加密！");
@@ -96,6 +97,7 @@ public class GoldwasserMicaliBinaryEncryption extends BinaryEncryption {
      * @version 1.0, 19/09/03
      * @author JinZhiyun
      */
+    @Override
     public Vector<BigInteger> encrypt() throws NotBinaryStringException {
         if (!StringTest.isOnlyContain01(plainText)) {
             throw new NotBinaryStringException("输入明文串还有非0、1的字符！");
@@ -128,52 +130,13 @@ public class GoldwasserMicaliBinaryEncryption extends BinaryEncryption {
         return cipherText;
     }
 
-//    public static void main(String[] args) {
-//        Scanner scan = new Scanner(System.in);
-//        boolean flag;
-//        String  str1;
-//
-//        do {
-//            flag = false;
-//            System.out.print("请输入明文消息：");
-//
-//            if (scan.hasNextLine()) {
-//                str1 = scan.nextLine();
-//            } else {
-//                System.out.println("发生错误！");
-//                scan.close();
-//
-//                return;
-//            }
-//
-//            for (int i = 0; i < str1.length(); i++) {
-//                if ((str1.charAt(i) != '0') && (str1.charAt(i) != '1')) {
-//                    System.out.println("仅能输入含0或1的字符串！");
-//                    flag = true;
-//
-//                    break;
-//                }
-//            }
-//        } while (flag);
-//
-//        scan.close();
-//
-//        GoldwasserMicaliBinaryEncryption gmbe1 = new GoldwasserMicaliBinaryEncryption(str1);
-//
-//        gmbe1.show();
-//        GoldwasserMicaliBinaryEncryption.resetKeys(511);
-//        gmbe1.setPlainText("101000000");
-//        System.out.println(gmbe1.encrypt());
-//        System.out.println(gmbe1.decrypt());
-//        gmbe1.setPlainText("1010111100000");
-//        gmbe1.show();
-//    }
-
+    @Override
     protected void resetAllTexts() {
         this.plainText = "";
         resetAllTextsExceptPlainText();
     }
 
+    @Override
     protected void resetAllTextsExceptPlainText() {
         this.cipherText = new Vector<>();
         this.decryptedPlainText = "";
@@ -227,6 +190,7 @@ public class GoldwasserMicaliBinaryEncryption extends BinaryEncryption {
         } while ((Method0.legendre(x, p) != -1) || (Method0.legendre(x, q) != -1));
     }
 
+    @Override
     public void show() {
         System.out.println("随机生成" + keysBitLength + "位大素数p（私钥）=" + p);
         System.out.println("随机生成" + keysBitLength + "位大素数q（私钥）=" + q);

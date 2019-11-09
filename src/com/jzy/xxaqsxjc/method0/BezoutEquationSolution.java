@@ -1,11 +1,9 @@
 package com.jzy.xxaqsxjc.method0;
 
-import java.math.BigInteger;
-
-import java.util.Scanner;
-
 import com.jzy.exception.integer.InputNonPositiveException;
 import com.jzy.util.BigIntegerTest;
+
+import java.math.BigInteger;
 
 /**
  * 贝祖等式求解：s*x+t*y=(x,y)，求出s,t
@@ -135,43 +133,4 @@ public class BezoutEquationSolution {
 
         return resultST;
     }
-
-//    public static void main(String[] args) {
-//        BigInteger x, y;
-//        Scanner scan = new Scanner(System.in);
-//
-//        System.out.print("请输入正整数x：");
-//
-//        if (scan.hasNextBigInteger()) {
-//            x = scan.nextBigInteger();
-//        } else {
-//            System.out.println("发生错误！");
-//            scan.close();
-//
-//            return;
-//        }
-//
-//        System.out.print("请输入正整数y：");
-//
-//        if (scan.hasNextBigInteger()) {
-//            y = scan.nextBigInteger();
-//        } else {
-//            System.out.println("发生错误！");
-//            scan.close();
-//
-//            return;
-//        }
-//
-//        scan.close();
-//        System.out.println("最大公因数为：" + Method0.maxCommonFactorXY(x, y));
-//
-//        BigInteger[] tmp1 = Method0.bezoutSolveQrSt(x, y);
-//
-//        System.out.println("s=" + tmp1[0] + ",t=" + tmp1[1]);
-//        System.out.println("正数s=" + Method0.bezoutSolveQrS11(x, y));
-//        System.out.println(x + " " + y);
-//    }
 }
-
-
-//~ Formatted by Jindent --- http://www.jindent.com

@@ -116,24 +116,6 @@ public class EllipticCurveCalculationOfFp {
         return rs;
     }
 
-//    public static void main(String[] args) {
-//        EllipticCurveCalculationOfFp eccfp = new EllipticCurveCalculationOfFp(new BigInteger("100823"),
-//                new BigInteger("3"),
-//                new BigInteger("7"));
-//        BigInteger[] p1 = {new BigInteger("5"), new BigInteger("101")};
-//        ArrayList<BigInteger[]> rs = eccfp.kPointSet(p1, 27);
-//
-//        for (int i = 0; i < rs.size(); i++) {
-//            System.out.println("x" + (i + 1) + "=" + rs.get(i)[0]);
-//            System.out.println("y" + (i + 1) + "=" + rs.get(i)[1]);
-//            System.out.println();
-//        }
-//
-//        System.out.println(eccfp.kPoint(p1, 10)[0]);
-//        System.out.println(eccfp.kPoint(p1, 10)[1]);
-//        System.out.println(eccfp.ordFp());
-//    }
-
     /**
      * 计算椭圆曲线的阶
      *

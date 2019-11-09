@@ -105,18 +105,6 @@ public class PolynomialCalculation {
         return 1;
     }
 
-//    public static void main(String[] args) throws PolyDivideByZeroException {
-//        int[] a = {3, 3, 1, 0, 1};
-//        int[] b = {1, 0, 0, 1};
-//        Polynomial pa = new Polynomial(a);
-//        Polynomial pb = new Polynomial(b);
-//
-//        System.out.println(PolynomialCalculation.maxCommonFactor(pa, pb));
-//        System.out.println(PolynomialCalculation.minCommonMultiple(pa, pb));
-//        System.out.println(PolynomialCalculation.ifReduciblePolynomial(pa));
-//        System.out.println(PolynomialCalculation.ifPrimPolynomial(pa));
-//    }
-
     /**
      * 最大公因式
      *

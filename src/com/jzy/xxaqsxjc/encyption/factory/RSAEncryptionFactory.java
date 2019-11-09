@@ -16,6 +16,7 @@ public class RSAEncryptionFactory implements EncryptionBuilder{
     public RSAEncryptionFactory() {
     }
 
+    @Override
     public Encryption getInstance() {
         if (encryption == null) {
             synchronized (RSAEncryptionFactory.class) {

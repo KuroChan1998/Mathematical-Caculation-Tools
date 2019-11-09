@@ -79,33 +79,4 @@ public class Jacobi {
             }
         }
     }
-
-//  public static void main(String[] args) {
-//      BigInteger q, p;
-//      Scanner scan = new Scanner(System.in);
-//      while (true) {
-//          System.out.print("请输入正整数q：");
-//          if (scan.hasNextBigInteger()) {
-//              q = scan.nextBigInteger();
-//          } else {
-//              System.out.println("发生错误！");
-//              scan.close();
-//              return;
-//          }
-//          System.out.print("请输入正整数p：");
-//          if (scan.hasNextBigInteger()) {
-//              p = scan.nextBigInteger();
-//          } else {
-//              System.out.println("发生错误！");
-//              scan.close();
-//              return;
-//          }
-//
-//          System.out.println("Jacobi(q/p)=" + Jacobi.jacobi(q, p));
-//      }
-//
-//  }
 }
-
-
-//~ Formatted by Jindent --- http://www.jindent.com

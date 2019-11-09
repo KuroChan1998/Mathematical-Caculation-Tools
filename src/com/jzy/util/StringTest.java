@@ -13,6 +13,7 @@ import com.jzy.xxaqsxjc.method0.Method0;
  * @version 1.0, 19/09/03
  */
 public class StringTest {
+    private StringTest(){}
 
     /**
      * 判断输入是否全为数字

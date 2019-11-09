@@ -208,24 +208,6 @@ public class Polynomial implements Cloneable {
         return false;
     }
 
-//    public static void main(String[] args) throws PolyDivideByZeroException {
-//
-//        // TODO Auto-generated method stub
-//        int[] a = {1, 1, 1, 0, 1};
-//        int[] b = {
-//                1, 0, 1, 1, 1, 0, 0, 0, 1
-//        };
-//        Polynomial pa = new Polynomial(a);
-//        Polynomial pb = new Polynomial(b);
-//
-//        System.out.println(pa);
-//        System.out.println(pb);
-//        System.out.println(pa.add(pb));
-//        System.out.println(pa.multiply(pb));
-//        System.out.println(pb.divide(pa));
-//        System.out.println(pow(pb, 65535));
-//    }
-
     /**
      * p1模p2的余式
      * <p>p1.mod(p2)即计算p1 mod p2的值<br>
@@ -331,6 +313,7 @@ public class Polynomial implements Cloneable {
      * @version 1.0, 19/09/02
      * @author JinZhiyun
      */
+    @Override
     public String toString() {
         String output = "";
 
