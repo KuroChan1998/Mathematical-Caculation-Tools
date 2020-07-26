@@ -1,9 +1,11 @@
 # Mathematical-Calculation-Tools
 
+项目更新优化于github，同学下载源码请前往：[https://github.com/KuroChan1998/Mathematical-Caculation-Tools](https://github.com/KuroChan1998/Mathematical-Caculation-Tools)
+
 * `Mathematical-Calculation-Tools`是一个数值计算工具，功能包括整数域的运算(e.g 贝祖等式求解、勒让得符号、原根、素性检验....）；多项式的运算（e.g 贝祖等式求解、不可约多项式、本原多项式判断....)；加密算法（e.g. RSA)；椭圆曲线上的计算。
 * 面向人群主要是上海交通大学信息安全专业修读《信息安全数学基础》课程的学生；其他网安专业学习数学理论基础的学生；抽象代数、应用数学领域学习的学生。
 * 含图形界面
-* 提供windows端的exe可执行程序；提供jar包，可作为api引用或在装有jre环境的机器上直接运行 
+* 提供jar包，可作为api引用或在装有jre环境的机器上直接运行 
 * 这里酷乐酱用原生java实现，没有使用任何第三方api，算法原理全部参考陈恭亮老师编著的《信息安全数学基础》教材以及wiki，开源以供大家学习。
 
 
@@ -16,7 +18,7 @@
 
 ### 使用开发工具建立项目并运行
 
-如果您装有jdk，以及idea、eclipse等开发环境和开发工具，可以导入的我源码（在src中），找到com.jzy.app.Main.java文件直接运行。
+如果您装有jdk，以及idea、eclipse等开发环境和开发工具，直接导入该maven项目，找到com.jzy.app.Main.java文件直接运行。
 
 ![Snipaste_2019-08-28_13-23-40](screenshot/Snipaste_2019-08-28_13-23-40.jpg)
 
@@ -35,11 +37,13 @@
   JRE: 1.8.0_152-release-1136-b43 amd64
   JVM: OpenJDK 64-Bit Server VM by JetBrains s.r.o
   Windows 10 10.0
+  
+  
 
 ## 项目结构
 
 ```
-└─src
+└─java
     └─com
         └─jzy
             ├─app    //主函数入口
@@ -61,19 +65,12 @@
 
 
 
-## 项目文档
-
-打开docs文件下的index.html，即可查看所有代码的注释说明
-
-
-
 ## 如何使用代码？
 
 这里省略对于图形界面的使用教程，正常脑壳的人都能上手。
 
 * 代码中对您有用的api大部分都涵盖在了`com.jzy.xxaqsxjc`包下，所有代码都有详细的注释
 
-* 代码文档详见`docs/index.html`
 
 这里列举关键方法概览和部分示例。更多的示例请参见`com.jzy.demo`包
 
