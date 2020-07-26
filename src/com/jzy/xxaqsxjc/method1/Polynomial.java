@@ -162,7 +162,7 @@ public class Polynomial implements Cloneable {
                     Polynomial qTmpResult = new Polynomial(result);
 
                     qResult = qResult.add(qTmpResult);
-                    tmpp1 = tmpp1.sub(qTmpResult.multiply(p2));
+                    tmpp1 = tmpp1.subtract(qTmpResult.multiply(p2));
 
                     if ((tmpp1.effectiveMaxDeg == 0) && (p2.effectiveMaxDeg == 0)) {
                         qResult = qResult.add(tmpp1);
@@ -221,7 +221,7 @@ public class Polynomial implements Cloneable {
     public Polynomial mod(Polynomial p2) throws PolyDivideByZeroException {
         Polynomial p1 = this, mResult;
 
-        mResult = p1.sub(p1.divide(p2).multiply(p2));
+        mResult = p1.subtract(p1.divide(p2).multiply(p2));
 
         return mResult;
     }
@@ -294,14 +294,14 @@ public class Polynomial implements Cloneable {
 
     /**
      * 两个多项式之差
-     * <p>p1.sub(p2)即计算p1-p2的值。由于这里特征p=2，所以减法结果上等于加法<br>
+     * <p>p1.subtract(p2)即计算p1-p2的值。由于这里特征p=2，所以减法结果上等于加法<br>
      *
      * @param p2 入参多项式p2
      * @return p1-p2
      * @version 1.0, 19/09/02
      * @author JinZhiyun
      */
-    public Polynomial sub(Polynomial p2) {
+    public Polynomial subtract(Polynomial p2) {
         return this.add(p2);
     }
 

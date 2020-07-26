@@ -1,8 +1,9 @@
 package com.jzy.xxaqsxjc.method1;
 
 import com.jzy.exception.ploynomial.InputPolyIsZeroException;
-import com.jzy.exception.ploynomial.PolyDivideByZeroException;
 import com.jzy.util.PolynomialTest;
+
+import java.util.LinkedList;
 
 /**
  * 多项式的贝祖等式求解 s*x+t*y=(x,y)，求出多形式s,t
@@ -11,11 +12,6 @@ import com.jzy.util.PolynomialTest;
  * @version 1.0, 19/09/02
  */
 public class PolynomialBezoutEquationSolution {
-    /**
-     * 规定贝祖等式计算辅助数组的最大长度
-     */
-    private static final int BEZOUT_SOLVE_QR_SIZE = 1000000;
-
     /**
      * 计算结果s
      */
@@ -29,20 +25,20 @@ public class PolynomialBezoutEquationSolution {
     /**
      * 表示是否计算过的标志位，若为false需要初始化指针j=0，并至自身为true
      */
-    private boolean flag;
+    private boolean flag = false;
 
     /**
      * 辅助数组的指针
      */
-    private int j;
+    private int j = 0;
 
     /**
      * s, t, q, r : 辅助数组
      */
-    private Polynomial[] s;
-    private Polynomial[] t;
-    private Polynomial[] q;
-    private Polynomial[] r;
+    private LinkedList<Polynomial> s = new LinkedList<>();
+    private LinkedList<Polynomial> t = new LinkedList<>();
+    private LinkedList<Polynomial> q = new LinkedList<>();
+    private LinkedList<Polynomial> r = new LinkedList<>();
 
     /**
      * 类无参构造函数，用以初始化
@@ -51,12 +47,6 @@ public class PolynomialBezoutEquationSolution {
      * @author JinZhiyun
      */
     public PolynomialBezoutEquationSolution() {
-        s = new Polynomial[BEZOUT_SOLVE_QR_SIZE];
-        t = new Polynomial[BEZOUT_SOLVE_QR_SIZE];
-        q = new Polynomial[BEZOUT_SOLVE_QR_SIZE];
-        r = new Polynomial[BEZOUT_SOLVE_QR_SIZE];
-        j = 0;
-        flag = true;
     }
 
     /**
@@ -92,26 +82,37 @@ public class PolynomialBezoutEquationSolution {
         if (!flag) {
             j = 0;
             flag = true;
+            s = new LinkedList<>();
+            t = new LinkedList<>();
+            q = new LinkedList<>();
+            q.add(null);
+            q.add(null);
+            r = new LinkedList<>();
+            r.add(null);
+            r.add(null);
+            //s[1]=1, s[2]=0
+            s.add(null);
+            s.add(Method1.POLY_1);
+            s.add(Method1.POLY_0);
+            //t[1]=0, t[2]=1
+            t.add(null);
+            t.add(Method1.POLY_0);
+            t.add(Method1.POLY_1);
         }
 
-        s[1] = Method1.POLY_1;    // 1
-        s[2] = Method1.POLY_0;     // 0
-        t[1] = Method1.POLY_0;
-        t[2] = Method1.POLY_1;
-        r[j] = x;
-        r[j + 1] = y;
-        q[j + 2] = r[j].divide(r[j + 1]);
-        r[j + 2] = r[j].mod(r[j + 1]);
-        s[j + 3] = s[j + 1].sub(q[j + 2].multiply(s[j + 2]));
-        t[j + 3] = t[j + 1].sub(q[j + 2].multiply(t[j + 2]));
-        x = r[j + 1];
-        y = r[j + 2];
+        r.set(j, x);
+        r.set(j + 1, y);
+        q.add(r.get(j).divide(r.get(j + 1)));
+        r.add(r.get(j).mod(r.get(j + 1)));
+        s.add(s.get(j + 1).subtract(q.get(j + 2).multiply(s.get(j + 2))));
+        t.add(t.get(j + 1).subtract(q.get(j + 2).multiply(t.get(j + 2))));
+        x = r.get(j + 1);
+        y = r.get(j + 2);
 
         if (PolynomialTest.ifEqualZero(y)) {
             flag = false;
-            resultST[0] = s[j + 2];
-            resultST[1] = t[j + 2];
-
+            resultST[0] = s.get(j + 2);
+            resultST[1] = t.get(j + 2);
             return resultST;
         } else {
             j += 1;

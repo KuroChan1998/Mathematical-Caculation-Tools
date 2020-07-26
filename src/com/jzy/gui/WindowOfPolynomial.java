@@ -15,7 +15,6 @@ import com.jzy.util.PolynomialTest;
 import com.jzy.util.StringTest;
 import com.jzy.xxaqsxjc.method1.Method1;
 import com.jzy.xxaqsxjc.method1.Polynomial;
-import com.jzy.xxaqsxjc.method1.PolynomialBezoutEquationSolution;
 
 /**
  * 多项式计算图形类
@@ -346,7 +345,7 @@ public class WindowOfPolynomial {
         btnp6.addActionListener(new ActionListener() { // 按钮响应事件
             @Override
             public void actionPerformed(ActionEvent e) {
-                Polynomial polynomial = p1.sub(p2);
+                Polynomial polynomial = p1.subtract(p2);
                 jtf6.setText(polynomial.toString());
             }
         });
