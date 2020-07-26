@@ -14,7 +14,7 @@
 
 ### 使用jar包
 
-在装有jre（>1.5）的机器上直接双击`Mathematical-Caculation-Tools.jar`可以直接得到图形界面
+在装有jre（>1.5）的机器上直接双击`Mathematical-Caculation-Tools-1.0-SNAPSHOT-jar-with-dependencies.jar`可以直接得到图形界面
 
 ### 使用开发工具建立项目并运行
 
